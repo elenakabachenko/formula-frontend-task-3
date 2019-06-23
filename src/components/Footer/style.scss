@@ -1,0 +1,86 @@
+@import '../style.scss';
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #efefef;
+    margin-bottom: 5px;
+
+    >div {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+
+
+        >span {
+            color: #555559;
+            font-family: 'Open Sans', sans-serif;
+            @include text-style(14px,
+            400,
+            24px,
+            none,
+            0);
+
+            @include device(ipad) {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    @include device(ipad) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.contact {
+    display: inline-block;
+
+    li {
+        display: inline-block;
+        list-style: none;
+        color: #555559;
+        font-family: 'Open Sans', sans-serif;
+        @include text-style(14px,
+        400,
+        24px,
+        none,
+        0);
+        position: relative;
+        padding-right: 16px;
+
+        &::after {
+            position: absolute;
+            content: " ";
+            height: 13px;
+            width: 1px;
+            background-color: #555559;
+            top: 6px;
+            right: 6px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+
+        @include device(small) {
+            display: block;
+            text-align: center;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        @include device(phone) {
+            font-size: 12px;
+        }
+
+
+    }
+
+}

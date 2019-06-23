@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,800&display=swap');
+
+$OrangeColor: #e67e22;
+
+@mixin device($type) {
+    @if $type==ipad {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $type==small {
+        @media screen and (max-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $type==phone {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+}
+
+@mixin text-style ($font_size,
+$font_weight,
+$line_height,
+$text_transform,
+$letter_spacing) {
+    font-size: $font_size;
+    font-weight: $font_weight;
+    line-height: $line_height;
+    text-transform: $text_transform;
+    letter-spacing: $letter_spacing;
+}
+
+
+body {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+h2 {
+    color: #555559;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    position: relative;
+
+    @include device(ipad) {
+
+        //margin-left: 51px;
+        &::after {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #286782;
+            content: " ";
+            top: 50%;
+            right: -51px;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #286782;
+        content: " ";
+        top: 50%;
+        left: -51px;
+    }
+
+    @include device(phone) {
+        margin: 48px 0 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}

@@ -1,0 +1,16 @@
+@import "../../components/style.scss";
+
+button {
+    padding: 24px 33px 20px 38px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #286782;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    @include text-style(20px,
+    400,
+    24px,
+    none,
+    -0.8px);
+    cursor: pointer;
+}

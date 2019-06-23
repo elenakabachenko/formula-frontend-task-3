@@ -1,0 +1,40 @@
+@import "../../components/style.scss";
+
+.form-group.input {
+    margin-bottom: 25px;
+
+    input {
+        width: 285px;
+        height: 45px;
+        padding: 0 0 0 15px;
+        border: 1px solid #f6f6f6;
+        border-radius: 8px;
+        outline: 0;
+
+        &::placeholder {
+            color: #cdcdcd;
+            font-family: 'Open Sans', sans-serif;
+            @include text-style(14px,
+            400,
+            16px,
+            uppercase,
+            0.42px);
+        }
+    }
+
+    &.has-error {
+        input {
+            background: rgba(255, 0, 0, .2);
+            border-color: red;
+        }
+    }
+
+    .error {
+        color: red;
+        @include text-style(10px,
+        400,
+        18px,
+        none,
+        0.51px);
+    }
+}

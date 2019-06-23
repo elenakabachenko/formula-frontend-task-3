@@ -1,0 +1,77 @@
+@import '../../components/style.scss';
+
+.container-hotdogs {
+    display: flex;
+    flex-direction: column;
+
+
+
+    >section {
+        &:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+
+        @include device(ipad) {
+            &.info-hotdogs {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+
+}
+
+.info-hotdogs {
+    display: flex;
+
+    >* {
+        width: 50%;
+
+        @include device(ipad) {
+            width: 100%;
+        }
+    }
+}
+
+.info-hotdogs-about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 0 137px;
+    box-sizing: border-box;
+
+
+    @include device(ipad) {
+        box-sizing: border-box;
+        padding: 42px;
+        align-items: center;
+    }
+
+    @include device(phone) {
+        padding: 16px;
+    }
+
+    p {
+        color: #555559;
+        font-family: 'Open Sans', sans-serif;
+        @include text-style(18px,
+        300,
+        23.97px,
+        none,
+        -0.72px);
+
+        @include device(ipad) {
+            text-align: center;
+        }
+    }
+}

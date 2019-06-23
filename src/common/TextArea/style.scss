@@ -1,0 +1,41 @@
+@import "../../components/style.scss";
+
+.form-group.textarea {
+    margin-bottom: 25px;
+
+    textarea {
+        width: 270px;
+        height: 110px;
+        padding: 10px 15px 0;
+        border: 1px solid #f6f6f6;
+        border-radius: 8px;
+        outline: 0;
+
+        &::placeholder {
+            color: #cdcdcd;
+            font-family: 'Open Sans', sans-serif;
+            @include text-style(14px,
+            400,
+            16px,
+            uppercase,
+            0.42px);
+        }
+    }
+
+
+    &.has-error {
+        textarea {
+            background: rgba(255, 0, 0, .2);
+            border-color: red;
+        }
+    }
+
+    .error {
+        color: red;
+        @include text-style(10px,
+        400,
+        18px,
+        none,
+        0.51px);
+    }
+}

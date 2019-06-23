@@ -1,0 +1,9 @@
+@import '../../components/style.scss';
+
+.sect-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}

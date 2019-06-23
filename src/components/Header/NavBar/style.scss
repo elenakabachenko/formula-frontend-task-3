@@ -1,0 +1,49 @@
+@import '../../style.scss';
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.11);
+    padding: 45px 0;
+}
+
+.main-nav {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-left: 40px;
+
+        &:first-child {
+            margin: 0;
+        }
+
+        @include device(small) {
+            display: block;
+            margin: 8px 0;
+            text-align: center;
+        }
+
+        a:link {
+            font-family: 'Open Sans', sans-serif;
+            color: #2e2e2e;
+            text-decoration: none;
+            @include text-style(20px,
+            800,
+            24px,
+            uppercase,
+            2px);
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s;
+        }
+
+        a:visited {
+            color: #726d6d;
+        }
+
+        a:hover,
+        a:active {
+            border-bottom: 2px solid $OrangeColor;
+        }
+    }
+}

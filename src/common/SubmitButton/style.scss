@@ -1,0 +1,25 @@
+@import "../../components/style";
+
+
+button.btn-submit {
+    height: 45px;
+    width: 300px;
+    padding: 0;
+    border: 2px solid #3db39e;
+    border-radius: 5px;
+    background-color: #3db39e;
+    color: #ffffff;
+    outline: 0;
+    cursor: pointer;
+
+    &[disabled] {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    @include text-style(17px,
+    400,
+    16px,
+    uppercase,
+    0.51px);
+}

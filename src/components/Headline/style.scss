@@ -1,0 +1,42 @@
+@import '../style.scss';
+
+.hotdog-headline {
+    background-color: #fbfafa;
+}
+
+.hotdog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 25%;
+}
+
+.hotdog-content h1 {
+    color: #555559;
+    font-family: "Open Sans", sans-serif;
+    @include text-style(56px,
+    300,
+    normal,
+    none,
+    -2.24px);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .hotdog-content h1 {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hotdog-content h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hotdog-content {
+        padding: 120px 32px;
+    }
+}
