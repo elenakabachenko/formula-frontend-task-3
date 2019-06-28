@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.scss'
 
@@ -13,7 +14,7 @@ export default class Footer extends Component {
                     <ul className="contact">
                         <li>274 Marconi Blvd. Columbus, Ohio 43215</li>
                         <li>614.538.0095</li>
-                        <li> Contact Us </li>
+                        <li><Link to="/contact">Contact Us</Link></li>
                     </ul>
                 </div>
             </footer>
